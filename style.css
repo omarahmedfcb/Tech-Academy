@@ -1,0 +1,47 @@
+.welcome {
+  clip-path: shape(
+    from 0% 3rem,
+    curve to 100% 3rem with 50% -3rem,
+    line to 100% 100%,
+    line to 0 100%
+  );
+}
+@media (min-width: 1024px) {
+  .welcome {
+    clip-path: shape(
+      from 0% 5rem,
+      curve to 100% 5rem with 50% -5rem,
+      line to 100% 100%,
+      line to 0 100%
+    );
+  }
+}
+
+nav .active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+}
+
+.courses .active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+}
+
+.testimonials__images-mini .active {
+  opacity: 1;
+}
+
+.courses__items-item:hover .card-overlay {
+  opacity: 1;
+}
+.courses__items-item:hover .card-overlay span {
+  margin-bottom: 1rem;
+}

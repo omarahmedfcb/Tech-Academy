@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Web Development",
+    "description": "Build modern websites with HTML, CSS, and JavaScript basics",
+    "image": "./images/web.png",
+    "level": "Beginner"
+  },
+  {
+    "title": "Python Programming",
+    "description": "Intro to coding and logic; accessible to students with no prior experience.",
+    "image": "./images/python.png",
+    "level": "Beginner"
+  },
+  {
+    "title": "Data Science",
+    "description": "Requires some Python knowledge; moves into data handling, ML basics.",
+    "image": "./images/data.png",
+    "level": "Intermediate"
+  },
+  {
+    "title": "Mobile App Development",
+    "description": "Learners should already understand programming before diving into app frameworks.",
+    "image": "./images/mob.png",
+    "level": "Intermediate"
+  },
+  {
+    "title": "Cybersecurity",
+    "description": "Needs strong networking and system fundamentals to explore vulnerabilities and protection.",
+    "image": "./images/cyber.png",
+    "level": "Advanced"
+  },
+  {
+    "title": "Cloud Computing",
+    "description": "Assumes familiarity with development & deployment before managing cloud infrastructures.",
+    "image": "./images/cloud.png",
+    "level": "Advanced"
+  }
+]

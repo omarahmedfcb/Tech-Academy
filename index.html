@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-900 font-[Inter]">
+    <!-- navbar start -->
+    <nav
+      aria-label="Global"
+      class="font-normal py-4 text-base shadow-gray-800/50 bg-transparent transition-[background-color] duration-300 text-amber-300 fixed w-full z-10"
+    >
+      <div
+        class="container w-18/20 lg:w-9/10 mx-auto flex items-center justify-between"
+      >
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5 flex items-center text-2xl">
+            <span class="sr-only">Your Company</span>
+            <i class="fa-solid fa-microchip"></i>
+            <h2>TechAcademy</h2>
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            command="show-modal"
+            commandfor="mobile-menu"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              data-slot="icon"
+              aria-hidden="true"
+              class="size-6"
+            >
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a
+            href="#"
+            class="py-4 px-2 active relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-amber-300 after:w-0 hover:after:w-full after:transition-all"
+            >Home</a
+          >
+          <a
+            href="./courses.html"
+            class="py-4 px-2 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-amber-300 after:w-0 hover:after:w-full after:transition-all"
+            >Courses</a
+          >
+          <a
+            href="#"
+            class="py-4 px-2 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-amber-300 after:w-0 hover:after:w-full after:transition-all"
+            >About Us</a
+          >
+          <a
+            href="#"
+            class="py-4 px-2 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-amber-300 after:w-0 hover:after:w-full after:transition-all"
+            >Contact Us</a
+          >
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a
+            href="#"
+            class="rounded-3xl border-2 border-amber-300 py-2 px-5 transition-all duration-300 hover:bg-amber-300 hover:text-gray-900"
+            >Get Started
+          </a>
+        </div>
+      </div>
+    </nav>
+    <el-dialog>
+      <dialog
+        id="mobile-menu"
+        class="backdrop:bg-trasparent font-normal lg:hidden"
+      >
+        <div tabindex="0" class="fixed z-10 inset-0 focus:outline-none">
+          <el-dialog-panel
+            class="fixed inset-y-0 text-amber-300 bg-gray-900 right-0 z-50 w-full overflow-y-auto px-4 py-5 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+          >
+            <div class="flex items-center justify-between">
+              <a href="#" class="-m-1.5 p-1.5 text-2xl">
+                <span class="sr-only">Your Company</span>
+                <i class="fa-solid fa-microchip"></i>
+              </a>
+              <button
+                type="button"
+                command="close"
+                commandfor="mobile-menu"
+                class="-m-2.5 rounded-md p-2.5 text-amber-300"
+              >
+                <span class="sr-only">Close menu</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  data-slot="icon"
+                  aria-hidden="true"
+                  class="size-6"
+                >
+                  <path
+                    d="M6 18 18 6M6 6l12 12"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-amber-300/10">
+                <div class="space-y-2 py-6">
+                  <a
+                    href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 hover:bg-amber-300 hover:text-gray-900"
+                    >Home</a
+                  >
+                  <a
+                    href="courses.html"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 hover:bg-amber-300 hover:text-gray-900"
+                    >Courses</a
+                  >
+                  <a
+                    href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 hover:bg-amber-300 hover:text-gray-900"
+                    >Contact Us</a
+                  >
+                  <a
+                    href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 hover:bg-amber-300 hover:text-gray-900"
+                    >About Us</a
+                  >
+                </div>
+                <div class="py-6">
+                  <a
+                    href="#"
+                    class="inline-block rounded-3xl border-2 transition-all duration-300 border-amber-300 py-2 px-5 text-base/7 hover:bg-amber-300 hover:text-gray-900"
+                    >Get Started</a
+                  >
+                </div>
+              </div>
+            </div>
+          </el-dialog-panel>
+        </div>
+      </dialog>
+    </el-dialog>
+    <!-- navbar end -->
+
+    <!-- hero start -->
+    <section class="hero relative">
+      <div
+        class="aspect-[3/6] xxs:aspect-[4/6] xs:aspect-[4/5] sm:aspect-[4/4] md:aspect-[4/3] lg:aspect-[16/9]"
+      >
+        <img
+          class="w-full h-full object-cover"
+          src="https://images.unsplash.com/photo-1628258334105-2a0b3d6efee1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+        />
+      </div>
+      <div
+        class="hero__blur absolute w-full h-full left-0 top-0 bg-gray-900/60 backdrop-blur-[4px] z-[4]"
+      ></div>
+      <div
+        class="hero__content absolute top-[45%] -translate-y-1/2 left-0 w-full z-[5]"
+      >
+        <div
+          class="container w-8/10 mx-auto relative flex flex-col items-center text-center gap-8"
+        >
+          <h1 class="text-5xl xs:text-6xl lg:text-7xl font-bold text-amber-300">
+            Welcome to TechAcademy
+          </h1>
+          <p class="text-xl lg:text-2xl text-white">
+            Learn the latest in technology with expert-led courses
+          </p>
+          <a
+            href="./courses.html"
+            class="inline-block text-lg lg:text-xl rounded-4xl border-2 border-amber-300 px-6 py-3 text-amber-300 hover:bg-amber-300 hover:text-gray-900 transition"
+          >
+            Explore Courses
+          </a>
+          <div
+            class="hero__content-search relative flex flex-col xs:flex-row rounded-3xl overflow-hidden items-stretch w-full md:w-7/9 lg:w-4/9"
+          >
+            <i
+              class="fa-solid fa-magnifying-glass absolute left-3 top-1/4 xs:top-1/2 -translate-y-1/2 text-gray-500"
+            ></i>
+
+            <input
+              type="text"
+              name=""
+              id=""
+              class="inline-block bg-gray-300 px-4 pl-9 py-3 outline-0 grow"
+              placeholder="What do you want to learn ?"
+            />
+            <button
+              class="bg-amber-300 max-xs:py-2 px-3 block border-2 border-amber-300 lg:rounded-tr-3xl lg:rounded-br-3xl hover:bg-transparent hover:text-amber-300 cursor-pointer transition"
+            >
+              Find the course
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- hero end -->
+
+    <!-- welcome start -->
+    <section
+      class="welcome text-white py-20 -mt-12 lg:-mt-20 relative z-[5] bg-gray-900"
+    >
+      <div class="container w-8/10 mx-auto">
+        <h2 class="text-4xl xs:text-5xl lg:text-6xl text-amber-300 text-center">
+          Start Your Journey Today
+        </h2>
+        <p class="text-center text-lg xs:text-xl lg:text-2xl">
+          Learn step by step, at the pace that matches your experience.
+        </p>
+        <div
+          class="welcome__cards grid grid-cols-1 md:grid-cols-2 md:justify-center lg:grid-cols-3 gap-6 mt-12"
+        >
+          <div
+            class="flex flex-col hover:scale-105 items-start p-3 gap-2 border-1 border-white hover:border-amber-300 transition"
+          >
+            <i class="fa-solid fa-book self-center text-4xl"></i>
+            <h4 class="text-3xl sm:text-5xl">Beginner</h4>
+            <p class="text-gray-400">
+              Learn fundamentals, no prior experience needed.
+            </p>
+            <a
+              href="#"
+              class="mt-12 border-b-[0.5px] border-white hover:border-amber-300 hover:text-amber-300 transition"
+              >Explore <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+          <div
+            class="flex flex-col hover:scale-105 items-start p-3 gap-2 border-1 border-white hover:border-amber-300 transition"
+          >
+            <i class="fa-solid fa-chart-line self-center text-4xl"></i>
+            <h4 class="text-3xl sm:text-5xl">Intermediate</h4>
+            <p class="text-gray-400">
+              Build on your knowledge with real-world projects.
+            </p>
+            <a
+              href="#"
+              class="mt-12 border-b-[0.5px] border-white hover:border-amber-300 hover:text-amber-300 transition"
+              >Apply Now <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+          <div
+            class="flex flex-col hover:scale-105 items-start md:col-span-2 lg:col-span-1 p-3 gap-2 border-1 border-white hover:border-amber-300 transition"
+          >
+            <i class="fa-solid fa-rocket self-center text-4xl"></i>
+            <h4 class="text-3xl sm:text-5xl">Advanced</h4>
+            <p class="text-gray-400">
+              Master complex topics and industry-level challenges.
+            </p>
+            <a
+              href="#"
+              class="mt-12 border-b-[0.5px] border-white hover:border-amber-300 hover:text-amber-300 transition"
+              >Learn More <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- welcome end -->
+    <!-- features start -->
+    <section class="features py-12 text-center">
+      <div class="container w-8/10 mx-auto">
+        <h2 class="text-4xl xs:text-5xl lg:text-6xl text-white text-center">
+          Our <span class="text-amber-300">Key</span> Features
+        </h2>
+        <div
+          class="features__items flex flex-wrap justify-between gap-y-4 mt-8"
+        >
+          <div
+            class="bg-gray-800 w-full md:w-14/29 lg:w-17/30 border border-gray-700 rounded-2xl p-6 hover:shadow-gray-600/40 hover:-translate-y-1.5 hover:shadow-lg transition"
+          >
+            <i
+              class="fa-solid fa-users bg-amber-300 text-gray-900 p-3 rounded-full text-5xl"
+            ></i>
+            <h4 class="text-2xl font-semibold text-white mt-4">
+              Expert Mentors
+            </h4>
+            <p class="text-gray-400 mt-2">
+              Learn directly from professionals with years of industry
+              experience.
+            </p>
+          </div>
+          <div
+            class="bg-gray-800 w-full md:w-14/29 lg:w-12/30 border border-gray-700 rounded-2xl p-6 hover:shadow-gray-600/40 hover:-translate-y-1.5 hover:shadow-lg transition"
+          >
+            <i
+              class="fa-solid fa-laptop-code bg-amber-300 text-gray-900 p-3 rounded-full text-5xl"
+            ></i>
+            <h4 class="text-2xl font-semibold text-white mt-4">
+              Hands-On Projects
+            </h4>
+            <p class="text-gray-400 mt-2">
+              Work on real-world projects that build confidence and showcase
+              your growing skills.
+            </p>
+          </div>
+          <div
+            class="bg-gray-800 w-full md:w-14/29 lg:w-9/29 border border-gray-700 rounded-2xl p-6 hover:shadow-gray-600/40 hover:-translate-y-1.5 hover:shadow-lg transition"
+          >
+            <i
+              class="fa-solid fa-clock bg-amber-300 text-gray-900 p-3 rounded-full text-5xl"
+            ></i>
+            <h4 class="text-2xl font-semibold text-white mt-4">
+              Flexible Learning
+            </h4>
+            <p class="text-gray-400 mt-2">
+              Study anytime, anywhere, at your own pace with structured learning
+              paths.
+            </p>
+          </div>
+          <div
+            class="bg-gray-800 w-full md:w-14/29 lg:w-9/29 border border-gray-700 rounded-2xl p-6 hover:shadow-gray-600/40 hover:-translate-y-1.5 hover:shadow-lg transition"
+          >
+            <i
+              class="fa-solid fa-briefcase bg-amber-300 text-gray-900 p-3 rounded-full text-5xl"
+            ></i>
+            <h4 class="text-2xl font-semibold text-white mt-4">
+              Career Support
+            </h4>
+            <p class="text-gray-400 mt-2">
+              Get personalized guidance, resume help, and interview prep to land
+              your dream job.
+            </p>
+          </div>
+          <div
+            class="bg-gray-800 w-full md:w-14/29 max-lg:mx-auto lg:w-9/29 border border-gray-700 rounded-2xl p-6 hover:shadow-gray-600/40 hover:-translate-y-1.5 hover:shadow-lg transition"
+          >
+            <i
+              class="fa-solid fa-handshake bg-amber-300 text-gray-900 p-3 rounded-full text-5xl"
+            ></i>
+            <h4 class="text-2xl font-semibold text-white mt-4">
+              Community Network
+            </h4>
+            <p class="text-gray-400 mt-2">
+              Connect with learners worldwide, share progress, and grow
+              together.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- features end -->
+
+    <!-- achievements start -->
+    <section class="achievements bg-gray-800 text-white py-8">
+      <div class="container w-8/10 mx-auto">
+        <h2 class="text-4xl xs:text-5xl lg:text-6xl text-amber-300 text-center">
+          Where Ambition Meets Results
+        </h2>
+        <p class="text-center text-lg xs:text-xl lg:text-2xl mb-8">
+          We’re proud of the milestones we’ve reached and the success of our
+          learners worldwide.
+        </p>
+        <div
+          class="achievements__content flex justify-between flex-wrap flex-col max-lg:gap-8 lg:flex-row lg:items-stretch"
+        >
+          <div
+            class="achievements__image lg:w-6/10 overflow-hidden rounded-lg max-lg:mx-auto"
+          >
+            <img
+              src="./images/grad.jpg"
+              class="w-full h-full object-cover"
+              alt=""
+            />
+          </div>
+          <div
+            class="achievements__boxes lg:w-3/10 max-lg:mx-auto flex flex-col gap-2"
+          >
+            <div class="achievements__boxes-box bg-emerald-500 p-6 rounded-lg">
+              <i class="fa-solid fa-users text-3xl"></i>
+              <h3 class="text-6xl font-bold flex items-center">
+                <span>10,000</span><span class="text-3xl font-medium">+</span>
+              </h3>
+              <h4 class="text-3xl font-semibold mb-4">Students Enrolled</h4>
+              <p>
+                Learners from all over the world trust Tech Academy to start
+                their tech journey.
+              </p>
+            </div>
+            <div class="achievements__boxes-box bg-sky-500 p-6 rounded-lg">
+              <i class="fa-solid fa-chalkboard-teacher text-3xl"></i>
+              <h3 class="text-6xl font-bold flex items-center">
+                <span>30</span><span class="text-3xl font-medium">+</span>
+              </h3>
+              <h4 class="text-3xl font-semibold mb-4">Expert Instructors</h4>
+              <p>
+                Guided by professionals with real-world industry experience.
+              </p>
+            </div>
+            <div class="achievements__boxes-box bg-amber-500 p-6 rounded-lg">
+              <i class="fa-solid fa-graduation-cap text-3xl"></i>
+              <h3 class="text-6xl font-bold flex items-center">
+                <span>95</span><span class="text-3xl font-medium">%</span>
+              </h3>
+              <h4 class="text-3xl font-semibold mb-4">Success Rate</h4>
+              <p>
+                Our graduates land jobs, internships, and launch their own
+                projects.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- achievements end -->
+
+    <footer class="footer bg-gray-950 text-white pt-8">
+      <div class="container w-8/10 mx-auto">
+        <div
+          class="footer__body flex flex-wrap items-center justify-between border-b-1 border-gray-600 pb-6 max-md:gap-y-6"
+        >
+          <div
+            class="footer__body-main w-full md:w-5/14 flex flex-col gap-6 max-md:items-center"
+          >
+            <a href="#" class="-m-1.5 p-1.5 flex items-center text-2xl">
+              <i class="fa-solid fa-microchip"></i>
+              <h2>TechAcademy</h2>
+            </a>
+            <div class="flex gap-6 text-2xl">
+              <a href="#" class="hover:text-amber-400 transition">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="hover:text-amber-400 transition">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="hover:text-amber-400 transition">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="hover:text-amber-400 transition">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer__company max-sm:w-1/2 flex flex-col gap-1">
+            <h4 class="font-bold mb-1">Company</h4>
+            <a href="#" class="font-light">Home</a>
+            <a href="#" class="font-light">About Us</a>
+            <a href="#" class="font-light">Blogs</a>
+            <a href="#" class="font-light">Contact Us</a>
+          </div>
+          <div class="footer__resources max-sm:w-1/2 flex flex-col gap-1">
+            <h4 class="font-bold mb-1">Resources</h4>
+            <a href="#" class="font-light">Blog</a>
+            <a href="#" class="font-light">Case Studies</a>
+            <a href="#" class="font-light">White Papers</a>
+            <a href="#" class="font-light">FAQS</a>
+          </div>
+          <div class="footer__legal max-sm:w-1/2 flex flex-col gap-1">
+            <h4 class="font-bold mb-1">Legal</h4>
+            <a href="#" class="font-light">Privacy Policy</a>
+            <a href="#" class="font-light">Terms & Conditions</a>
+            <a href="#" class="font-light">Cookie Policy</a>
+            <a href="#" class="font-light">Disclaimer</a>
+          </div>
+        </div>
+        <small class="text-center block font-light text-base md:text-lg py-8"
+          >© Copyright Constructopia 2025. All Rights Reserved.</small
+        >
+      </div>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/js/all.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let navbar = document.querySelector("nav");
+      let navItems = document.querySelectorAll("a.nav-link");
+      document.addEventListener("scroll", function () {
+        if (window.scrollY > 2) {
+          showNav();
+        } else {
+          hideNav();
+        }
+      });
+      function showNav() {
+        navbar.classList.add("bg-gray-900");
+        navbar.classList.add("shadow-md");
+        navbar.classList.remove("bg-transparent");
+      }
+      function hideNav() {
+        navbar.classList.remove("bg-gray-900");
+        navbar.classList.remove("shadow-md");
+
+        navbar.classList.add("bg-transparent");
+      }
+    </script>
+  </body>
+</html>

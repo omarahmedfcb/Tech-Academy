@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-900 font-[Inter]">
+    <!-- navbar start -->
+    <nav
+      aria-label="Global"
+      class="font-normal py-4 text-base shadow-gray-800/50 bg-transparent transition-[background-color] duration-300 text-amber-300 fixed w-full z-10"
+    >
+      <div
+        class="container w-18/20 lg:w-9/10 mx-auto flex items-center justify-between"
+      >
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5 flex items-center text-2xl">
+            <span class="sr-only">Your Company</span>
+            <i class="fa-solid fa-microchip"></i>
+            <h2>TechAcademy</h2>
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            command="show-modal"
+            commandfor="mobile-menu"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              data-slot="icon"
+              aria-hidden="true"
+              class="size-6"
+            >
+              <path
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a
+            href="./index.html"
+            class="py-4 px-2 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-amber-300 after:w-0 hover:after:w-full after:transition-all"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="py-4 px-2 active relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-amber-300 after:w-0 hover:after:w-full after:transition-all"
+            >Courses</a
+          >
+          <a
+            href="#"
+            class="py-4 px-2 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-amber-300 after:w-0 hover:after:w-full after:transition-all"
+            >About Us</a
+          >
+          <a
+            href="#"
+            class="py-4 px-2 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-amber-300 after:w-0 hover:after:w-full after:transition-all"
+            >Contact Us</a
+          >
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a
+            href="#"
+            class="rounded-3xl border-2 border-amber-300 py-2 px-5 transition-all duration-300 hover:bg-amber-300 hover:text-gray-900"
+            >Get Started
+          </a>
+        </div>
+      </div>
+    </nav>
+    <el-dialog>
+      <dialog
+        id="mobile-menu"
+        class="backdrop:bg-trasparent font-normal lg:hidden"
+      >
+        <div tabindex="0" class="fixed z-10 inset-0 focus:outline-none">
+          <el-dialog-panel
+            class="fixed inset-y-0 text-amber-300 bg-gray-900 right-0 z-50 w-full overflow-y-auto px-4 py-5 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+          >
+            <div class="flex items-center justify-between">
+              <a href="#" class="-m-1.5 p-1.5 text-2xl">
+                <span class="sr-only">Your Company</span>
+                <i class="fa-solid fa-microchip"></i>
+              </a>
+              <button
+                type="button"
+                command="close"
+                commandfor="mobile-menu"
+                class="-m-2.5 rounded-md p-2.5 text-amber-300"
+              >
+                <span class="sr-only">Close menu</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  data-slot="icon"
+                  aria-hidden="true"
+                  class="size-6"
+                >
+                  <path
+                    d="M6 18 18 6M6 6l12 12"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-amber-300/10">
+                <div class="space-y-2 py-6">
+                  <a
+                    href="index.html"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 hover:bg-amber-300 hover:text-gray-900"
+                    >Home</a
+                  >
+                  <a
+                    href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 hover:bg-amber-300 hover:text-gray-900"
+                    >Courses</a
+                  >
+                  <a
+                    href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 hover:bg-amber-300 hover:text-gray-900"
+                    >Contact Us</a
+                  >
+                  <a
+                    href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 hover:bg-amber-300 hover:text-gray-900"
+                    >About Us</a
+                  >
+                </div>
+                <div class="py-6">
+                  <a
+                    href="#"
+                    class="inline-block rounded-3xl border-2 transition-all duration-300 border-amber-300 py-2 px-5 text-base/7 hover:bg-amber-300 hover:text-gray-900"
+                    >Get Started</a
+                  >
+                </div>
+              </div>
+            </div>
+          </el-dialog-panel>
+        </div>
+      </dialog>
+    </el-dialog>
+    <!-- navbar end -->
+
+    <!-- banner start -->
+    <section class="banner bg-gray-800 pt-28 -mb-[3px]">
+      <div class="container mx-auto w-8/10">
+        <h1
+          class="text-5xl xs:text-6xl lg:text-7xl mb-2 text-center font-bold text-amber-300"
+        >
+          Learn at Your Own Pace
+        </h1>
+        <p class="text-xl lg:text-2xl text-white text-center mb-6">
+          From beginner to advanced, find the right course to fuel your tech
+          journey.
+        </p>
+        <div class="banner__image w-full md:w-8/10 lg:w-6/10 mx-auto">
+          <img
+            src="./images/undraw_code-thinking.svg"
+            class="w-full h-full block"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <!-- banner end -->
+
+    <!-- courses start -->
+    <section class="courses bg-gray-900 text-white py-8">
+      <div class="container mx-auto w-8/10 flex flex-col">
+        <h2
+          class="text-4xl xs:text-5xl lg:text-6xl text-amber-300 text-center mb-4"
+        >
+          Explore Our Courses
+        </h2>
+        <div
+          class="courses__filter mx-auto flex flex-wrap gap-1 text-white mb-6"
+        >
+          <a
+            href="#"
+            data-level="All"
+            class="py-2 px-2 active relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-white after:w-0 hover:after:w-full after:transition-all"
+            >All</a
+          >
+          <a
+            href="#"
+            data-level="Beginner"
+            class="py-2 px-2 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-white after:w-0 hover:after:w-full after:transition-all"
+            >Beginner</a
+          >
+          <a
+            href="#"
+            data-level="Intermediate"
+            class="py-2 px-2 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-white after:w-0 hover:after:w-full after:transition-all"
+            >Intermediate</a
+          >
+          <a
+            href="#"
+            data-level="Advanced"
+            class="py-2 px-2 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-white after:w-0 hover:after:w-full after:transition-all"
+            >Advanced</a
+          >
+        </div>
+        <div
+          class="courses__items grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        >
+          <div
+            data-level="beginner"
+            class="courses__items-item flex flex-col overflow-hidden border-1 border-gray-500 rounded-3xl"
+          >
+            <div class="aspect-[16/9] relative">
+              <img
+                src="./images/web.png"
+                class="absolute top-0 left-0 w-full h-full object-cover"
+                alt=""
+              />
+              <a
+                href="#"
+                class="card-overlay absolute top-0 left-0 w-full h-full bg-gray-900/70 opacity-0 transition-opacity duration-300 overflow-hidden flex justify-center items-end"
+              >
+                <span
+                  class="-mb-8 block transition-[margin-bottom] duration-300 delay-75"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i> Show
+                  Details</span
+                >
+              </a>
+            </div>
+            <div class="item-body flex flex-col grow items-start gap-3 p-4">
+              <h3 class="text-3xl">Web Development</h3>
+              <p class="font-extralight">
+                Build modern websites with HTML, CSS, and JavaScript basics
+              </p>
+              <div
+                class="item-foot mt-auto flex justify-between items-center self-stretch"
+              >
+                <a
+                  href="#"
+                  class="item-level rounded-4xl py-1 px-3 bg-transparent border-2 border-amber-300 hover:bg-amber-300 hover:text-gray-900 transition"
+                  >Enroll now <i class="fa-solid fa-arrow-right"></i
+                ></a>
+                <div
+                  class="item-level rounded-4xl py-1 px-3 bg-green-500 text-xs"
+                >
+                  Beginner
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="courses__items-item flex flex-col overflow-hidden border-1 border-gray-500 rounded-3xl"
+          >
+            <div class="aspect-[16/9] relative">
+              <img
+                src="./images/python.png"
+                class="absolute top-0 left-0 w-full h-full object-cover"
+                alt=""
+              />
+              <a
+                href="#"
+                class="card-overlay absolute top-0 left-0 w-full h-full bg-gray-900/70 opacity-0 transition-opacity duration-300 overflow-hidden flex justify-center items-end"
+              >
+                <span
+                  class="-mb-8 block transition-[margin-bottom] duration-300 delay-75"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i> Show
+                  Details</span
+                >
+              </a>
+            </div>
+            <div class="item-body flex flex-col grow items-start gap-3 p-4">
+              <h3 class="text-3xl">Python Programming</h3>
+              <p class="font-extralight">
+                Intro to coding and logic; accessible to students with no prior
+                experience.
+              </p>
+              <div
+                class="item-foot mt-auto flex justify-between items-center self-stretch"
+              >
+                <a
+                  href="#"
+                  class="rounded-4xl py-1 px-3 bg-transparent border-2 border-amber-300 hover:bg-amber-300 hover:text-gray-900 transition"
+                  >Enroll now <i class="fa-solid fa-arrow-right"></i
+                ></a>
+                <div
+                  class="item-level rounded-4xl py-1 px-3 bg-green-500 text-xs"
+                >
+                  Beginner
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="courses__items-item flex flex-col overflow-hidden border-1 border-gray-500 rounded-3xl"
+          >
+            <div class="aspect-[16/9] relative">
+              <img
+                src="./images/data.png"
+                class="absolute top-0 left-0 w-full h-full object-cover"
+                alt=""
+              />
+              <a
+                href="#"
+                class="card-overlay absolute top-0 left-0 w-full h-full bg-gray-900/70 opacity-0 transition-opacity duration-300 overflow-hidden flex justify-center items-end"
+              >
+                <span
+                  class="-mb-8 block transition-[margin-bottom] duration-300 delay-75"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i> Show
+                  Details</span
+                >
+              </a>
+            </div>
+            <div class="item-body flex flex-col grow items-start gap-3 p-4">
+              <h3 class="text-3xl">Data Science</h3>
+              <p class="font-extralight">
+                Requires some Python knowledge; moves into data handling, ML
+                basics.
+              </p>
+              <div
+                class="item-foot mt-auto flex justify-between items-center self-stretch"
+              >
+                <a
+                  href="#"
+                  class="rounded-4xl py-1 px-3 bg-transparent border-2 border-amber-300 hover:bg-amber-300 hover:text-gray-900 transition"
+                  >Enroll now <i class="fa-solid fa-arrow-right"></i
+                ></a>
+                <div
+                  class="item-level rounded-4xl py-1 px-3 bg-blue-500 text-xs"
+                >
+                  Intermediate
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="courses__items-item overflow-hidden flex flex-col border-1 border-gray-500 rounded-3xl"
+          >
+            <div class="aspect-[16/9] relative">
+              <img
+                src="./images/mob.png"
+                class="absolute top-0 left-0 w-full h-full object-cover"
+                alt=""
+              />
+              <a
+                href="#"
+                class="card-overlay absolute top-0 left-0 w-full h-full bg-gray-900/70 opacity-0 transition-opacity duration-300 overflow-hidden flex justify-center items-end"
+              >
+                <span
+                  class="-mb-8 block transition-[margin-bottom] duration-300 delay-75"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i> Show
+                  Details</span
+                >
+              </a>
+            </div>
+            <div class="item-body flex grow flex-col items-start gap-3 p-4">
+              <h3 class="text-3xl">Mobile App Development</h3>
+              <p class="font-extralight">
+                Learners should already understand programming before diving
+                into app frameworks.
+              </p>
+              <div
+                class="item-foot mt-auto flex justify-between items-center self-stretch"
+              >
+                <a
+                  href="#"
+                  class="rounded-4xl py-1 px-3 bg-transparent border-2 border-amber-300 hover:bg-amber-300 hover:text-gray-900 transition"
+                  >Enroll now <i class="fa-solid fa-arrow-right"></i
+                ></a>
+                <div
+                  class="item-level rounded-4xl py-1 px-3 bg-blue-500 text-xs"
+                >
+                  Intermediate
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="courses__items-item flex flex-col overflow-hidden border-1 border-gray-500 rounded-3xl"
+          >
+            <div class="aspect-[16/9] relative">
+              <img
+                src="./images/cyber.png"
+                class="absolute top-0 left-0 w-full h-full object-cover"
+                alt=""
+              />
+              <a
+                href="#"
+                class="card-overlay absolute top-0 left-0 w-full h-full bg-gray-900/70 opacity-0 transition-opacity duration-300 overflow-hidden flex justify-center items-end"
+              >
+                <span
+                  class="-mb-8 block transition-[margin-bottom] duration-300 delay-75"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i> Show
+                  Details</span
+                >
+              </a>
+            </div>
+            <div class="item-body flex flex-col grow items-start gap-3 p-4">
+              <h3 class="text-3xl">Cybersecurity</h3>
+              <p class="font-extralight">
+                Needs strong networking and system fundamentals to explore
+                vulnerabilities and protection.
+              </p>
+              <div
+                class="item-foot mt-auto flex justify-between items-center self-stretch"
+              >
+                <a
+                  href="#"
+                  class="rounded-4xl py-1 px-3 bg-transparent border-2 border-amber-300 hover:bg-amber-300 hover:text-gray-900 transition"
+                  >Enroll now <i class="fa-solid fa-arrow-right"></i
+                ></a>
+                <div
+                  class="item-level rounded-4xl py-1 px-3 bg-red-500 text-xs"
+                >
+                  Advanced
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="courses__items-item flex flex-col overflow-hidden border-1 border-gray-500 rounded-3xl"
+          >
+            <div class="aspect-[16/9] relative">
+              <img
+                src="./images/cloud.png"
+                class="absolute top-0 left-0 w-full h-full object-cover"
+                alt=""
+              />
+              <a
+                href="#"
+                class="card-overlay absolute top-0 left-0 w-full h-full bg-gray-900/70 opacity-0 transition-opacity duration-300 overflow-hidden flex justify-center items-end"
+              >
+                <span
+                  class="-mb-8 block transition-[margin-bottom] duration-300 delay-75"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i> Show
+                  Details</span
+                >
+              </a>
+            </div>
+            <div class="item-body flex flex-col grow items-start gap-3 p-4">
+              <h3 class="text-3xl">Cloud Computing</h3>
+              <p class="font-extralight">
+                Assumes familiarity with development & deployment before
+                managing cloud infrastructures.
+              </p>
+
+              <div
+                class="item-foot mt-auto flex justify-between items-center self-stretch"
+              >
+                <a
+                  href="#"
+                  class="rounded-4xl py-1 px-3 bg-transparent border-2 border-amber-300 hover:bg-amber-300 hover:text-gray-900 transition"
+                  >Enroll now <i class="fa-solid fa-arrow-right"></i
+                ></a>
+                <div
+                  class="item-level rounded-4xl py-1 px-3 bg-red-500 text-xs"
+                >
+                  Advanced
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a
+          href="#"
+          class="bg-amber-300 mt-12 mx-auto inline-block text-gray-900 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-amber-400 transition"
+        >
+          Load More...
+        </a>
+      </div>
+    </section>
+    <!-- courses end -->
+
+    <!-- test start-->
+    <section class="testimonials py-8">
+      <div class="container mx-auto w-8/10">
+        <h2
+          class="text-4xl xs:text-5xl lg:text-6xl text-amber-300 text-center mb-8"
+        >
+          Don't take our word for it, take theirs
+        </h2>
+        <div
+          class="testimonials__body flex flex-wrap max-lg:flex-col-reverse gap-y-4"
+        >
+          <div
+            class="testimonials__images lg:w-1/2 flex flex-col items-center gap-4"
+          >
+            <div
+              class="testimonials__images-big max-lg:hidden overflow-hidden rounded-t-full h-[300px]"
+            >
+              <img src="./images/1.jpg" class="w-full h-full" alt="" />
+            </div>
+            <div class="testimonials__images-mini flex gap-4 h-[100px]">
+              <div
+                class="mini-item opacity-30 active overflow-hidden rounded-t-full"
+              >
+                <img
+                  src="./images/1.jpg"
+                  id="img1"
+                  class="w-full h-full cursor-pointer"
+                  alt=""
+                />
+              </div>
+              <div class="mini-item opacity-30 overflow-hidden rounded-t-full">
+                <img
+                  src="./images/2.jpg"
+                  id="img2"
+                  class="w-full h-full cursor-pointer"
+                  alt=""
+                />
+              </div>
+              <div class="mini-item opacity-30 overflow-hidden rounded-t-full">
+                <img
+                  src="./images/3.jpg"
+                  id="img3"
+                  class="w-full h-full cursor-pointer"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="testimonials__text max-lg:items-center lg:w-1/2 bg-gray-800 px-4 rounded-4xl text-white flex flex-col justify-center"
+          >
+            <p class="text-2xl/normal sm:text-4xl/relaxed text-white">
+              <q
+                >This platform gave me the confidence to finally start coding.
+                The explanations were simple, and the projects made learning fun
+                and practical.</q
+              >
+            </p>
+            <h4 class="font-bold">Sara Ahmed</h4>
+            <h5 class="font-extralight">Web Development</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- test end-->
+
+    <!-- Cta start-->
+    <section class="call bg-gray-800 py-8">
+      <div
+        class="container mx-auto w-8/10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+      >
+        <div class="call__text">
+          <h2 class="text-4xl xs:text-5xl lg:text-6xl text-amber-300 mb-4">
+            Your Next Project Starts Now.
+          </h2>
+          <p class="text-xl lg:text-2xl text-white">
+            From Python to Cloud, turn lessons into portfolio-ready builds.
+            Learn at your own pace with mentors by your side.
+          </p>
+          <div class="flex flex-wrap gap-4 mt-4">
+            <a
+              href="#"
+              class="bg-amber-300 text-gray-900 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-amber-400 transition"
+            >
+              Enroll Now
+            </a>
+            <a
+              href="#"
+              class="border-2 border-amber-300 text-amber-300 px-6 py-3 rounded-full hover:bg-amber-300 hover:text-gray-900 transition"
+            >
+              See Syllabus
+            </a>
+          </div>
+          <p class="text-sm text-gray-400 mt-4">
+            Learn at your own pace · Mentors included
+          </p>
+        </div>
+        <div class="call__image rounded-xl overflow-hidden">
+          <img src="./images/cta.jpg" class="w-full h-full" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- Cta end-->
+
+    <!-- footer start -->
+    <footer class="footer bg-gray-950 text-white pt-8">
+      <div class="container w-8/10 mx-auto">
+        <div
+          class="footer__body flex flex-wrap items-center justify-between border-b-1 border-gray-600 pb-6 max-md:gap-y-6"
+        >
+          <div
+            class="footer__body-main w-full md:w-5/14 flex flex-col gap-6 max-md:items-center"
+          >
+            <a
+              href="#"
+              class="-m-1.5 p-1.5 flex items-center text-2xl max-md:justify-center"
+            >
+              <i class="fa-solid fa-microchip"></i>
+              <h2>TechAcademy</h2>
+            </a>
+            <div class="flex gap-6 text-2xl">
+              <a href="#" class="hover:text-amber-400 transition">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="hover:text-amber-400 transition">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="hover:text-amber-400 transition">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="hover:text-amber-400 transition">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer__company max-sm:w-1/2 flex flex-col gap-1">
+            <h4 class="font-bold mb-1">Company</h4>
+            <a href="#" class="font-light">Home</a>
+            <a href="#" class="font-light">About Us</a>
+            <a href="#" class="font-light">Blogs</a>
+            <a href="#" class="font-light">Contact Us</a>
+          </div>
+          <div class="footer__resources max-sm:w-1/2 flex flex-col gap-1">
+            <h4 class="font-bold mb-1">Resources</h4>
+            <a href="#" class="font-light">Blog</a>
+            <a href="#" class="font-light">Case Studies</a>
+            <a href="#" class="font-light">White Papers</a>
+            <a href="#" class="font-light">FAQS</a>
+          </div>
+          <div class="footer__legal max-sm:w-1/2 flex flex-col gap-1">
+            <h4 class="font-bold mb-1">Legal</h4>
+            <a href="#" class="font-light">Privacy Policy</a>
+            <a href="#" class="font-light">Terms & Conditions</a>
+            <a href="#" class="font-light">Cookie Policy</a>
+            <a href="#" class="font-light">Disclaimer</a>
+          </div>
+        </div>
+        <small class="text-center block font-light text-base md:text-lg py-8"
+          >© Copyright Constructopia 2025. All Rights Reserved.</small
+        >
+      </div>
+    </footer>
+    <!-- footer end -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/js/all.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let navbar = document.querySelector("nav");
+      let navItems = document.querySelectorAll("a.nav-link");
+      document.addEventListener("scroll", function () {
+        if (window.scrollY > 2) {
+          showNav();
+        } else {
+          hideNav();
+        }
+      });
+      function showNav() {
+        navbar.classList.add("bg-gray-900");
+        navbar.classList.add("shadow-md");
+        navbar.classList.remove("bg-transparent");
+      }
+      function hideNav() {
+        navbar.classList.remove("bg-gray-900");
+        navbar.classList.remove("shadow-md");
+        navbar.classList.add("bg-transparent");
+      }
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>

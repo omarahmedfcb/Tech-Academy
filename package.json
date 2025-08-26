@@ -1,0 +1,12 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch ./main/*.html",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify ./main/*.html"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "tailwindcss": "^4.1.12"
+  }
+}
